@@ -1,0 +1,32 @@
+﻿/* docs/stylesheets/custom.css */
+
+:root {
+    /* 1. 바탕 & 기본 텍스트 */
+    --dracula-bg: #282a36;
+    --dracula-fg: #f8f8f2;
+
+    /* 2. UI 요소 & 주석 */
+    --dracula-selection: #44475a;
+    --dracula-comment: #6272a4;
+
+    /* 3. 포인트 색상 (Accent Colors) */
+    --dracula-cyan: #8be9fd;
+    --dracula-green: #50fa7b;
+    --dracula-orange: #ffb86c;
+    --dracula-pink: #ff79c6;
+    --dracula-purple: #bd93f9;
+    --dracula-red: #ff5555;
+    --dracula-yellow: #f1fa8c;
+}
+
+/* * 🟢 상단 헤더 배경색 변경
+ * Dracula 테마 구조에 맞게 범용 클래스(.navbar)와 태그(header)를 사용합니다.
+ */
+header, .navbar {
+    background-color: var(--dracula-green) !important;
+}
+
+/* 🟢 본문 내 클릭 가능한 링크의 텍스트 색상 변경 */
+a {
+    color: var(--dracula-fg) !important;
+}

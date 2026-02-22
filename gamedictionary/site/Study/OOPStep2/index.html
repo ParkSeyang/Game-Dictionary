@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>상속 - 게임 백화사전</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\uc0c1\uc18d";
+        var mkdocs_page_input_path = "Study\\OOPStep2.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 게임 백화사전
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">홈</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity 게임 개발 노트</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Unity/">유니티란?</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OOP/">객체지향(OOP)에 대하여</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >객체 지향의 4가지 방법</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep1/">캡슐화</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">상속</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_2">상속의 장점</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep3/">다형성</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep4/">추상화</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">게임 소개</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >장르</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >아케이드</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Games/Tetris/">테트리스</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Games/SuperMario/">슈퍼 마리오</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >RPG</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Games/Pokemon/">포켓몬스터</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">게임 백화사전</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Unity 게임 개발 노트</li>
+          <li class="breadcrumb-item">객체 지향의 4가지 방법</li>
+      <li class="breadcrumb-item active">상속</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="_1">상속이란?</h2>
+<p>정의 : 상속이란 하위클래스(자식 클래스)가 상위 클래스(부모 클래스)의 특성과 기능을 물려받는 것을  의미합니다.<br />
+부모클래스의 모든 특성(멤버 변수, 메서드)은 자식 클래스에서 사용할 수 있으며, 이를 통해 코드의 중복을 줄이고 유사한 객체들을 쉽게 만들수 있습니다.</p>
+<h3 id="_2">상속의 장점</h3>
+<ol>
+<li>
+<p>코드의 재사용성</p>
+<ul>
+<li>부모클래스의 특성을 상속받아 새로운 클래스를 생성할 수 있기 때문에 코드의 중복을 최소화 하고 유사한 객체들을 쉽게 만들수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p>계층 구조의 표현</p>
+<ul>
+<li>클래스 간의 상속 관계를 통해 계층 구조를 형성하여 코드를 조직화하고 이해하기 쉽게 만듭니다.</li>
+</ul>
+</li>
+<li>
+<p>확장성</p>
+<ul>
+<li>부모 클래스를 수정하면 이를 상속받은 모든 자식 클래스에 영향을 줄 수 있습니다.<br />
+따라서 코드의 수정이 쉬우며, 새로운 기능을 추가하거나 변경할 수 있습니다.</li>
+</ul>
+</li>
+</ol>
+<p>예시 사진</p>
+<p><img alt="3.png" src="../../Picture/3.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../OOPStep1/" class="btn btn-neutral float-left" title="캡슐화"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../OOPStep3/" class="btn btn-neutral float-right" title="다형성">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../OOPStep1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../OOPStep3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

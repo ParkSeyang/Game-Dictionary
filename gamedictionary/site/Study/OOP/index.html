@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>객체지향(OOP)에 대하여 - 게임 백화사전</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\uac1d\uccb4\uc9c0\ud5a5(OOP)\uc5d0 \ub300\ud558\uc5ec";
+        var mkdocs_page_input_path = "Study\\OOP.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 게임 백화사전
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">홈</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity 게임 개발 노트</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Unity/">유니티란?</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">객체지향(OOP)에 대하여</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >객체 지향의 4가지 방법</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep1/">캡슐화</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep2/">상속</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep3/">다형성</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../OOPStep4/">추상화</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">게임 소개</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >장르</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >아케이드</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Games/Tetris/">테트리스</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Games/SuperMario/">슈퍼 마리오</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >RPG</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Games/Pokemon/">포켓몬스터</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">게임 백화사전</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Unity 게임 개발 노트</li>
+      <li class="breadcrumb-item active">객체지향(OOP)에 대하여</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="_1">객체 지향 프로그래밍 이란?</h2>
+<p>정의 : 객체 지향 프로그래밍은 컴퓨터 프로그래밍 패러다임 중 하나로, <br />
+프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 유기적인 상호작용을 통해 로직을 구성하는 프로그래밍 방법이다.</p>
+<hr />
+<h2 id="3">객체지향 프로그래밍의 대표적인 장점 3가지</h2>
+<h3 id="1-reusability-extensibility">1. 코드 재사용성 및 확장성 (Reusability &amp; Extensibility)</h3>
+<p>상속(Inheritance)과 다형성(Polymorphism)을 통해 기존 코드를 쉽게 확장하고 재사용할 수 있습니다.<br />
+새로운 기능이 필요할 때 기존 코드를 수정하는 대신, 기존 클래스를 상속받아 필요한 부분만 재정의(Override)하여 추가할 수 있으므로 개발 속도가 향상됩니다.</p>
+<h3 id="2-maintainability-modularity">2. 유지보수성 및 모듈화 (Maintainability &amp; Modularity)</h3>
+<p>캡슐화(Encapsulation)를 통해 데이터(상태)와 로직(행위)을 하나의 객체로 묶고, 외부 접근을 엄격하게 제어합니다.<br />
+버그가 발생했을 때 문제가 되는 객체 내부만 확인하고 수정하면 되므로 사이드 이펙트(Side Effect)를 최소화할 수 있습니다. 각 객체가 독립적인 모듈로 작동하기 때문에 여러 개발자가 동시에 협업하기에도 유리합니다.</p>
+<h3 id="3-intuitive-modeling">3. 직관적인 현실 세계 모델링 (Intuitive Modeling)</h3>
+<p>추상화(Abstraction)를 통해 복잡한 시스템을 사람이 인지하기 쉬운 '객체' 단위로 나누어 설계할 수 있습니다.<br />
+기획서나 요구사항에 등장하는 명사(예: 플레이어, 몬스터, 무기)를 클래스로, 동사(예: 공격하다, 이동하다)를 메서드로 직관적으로 매핑할 수 있어 도메인 로직을 코드로 표현하기 수월합니다.</p>
+<hr />
+<h2 id="3_1">객체지향 프로그래밍의 대표적인 단점 3가지</h2>
+<h3 id="1-performance-overhead">1. 성능 오버헤드 (Performance Overhead)</h3>
+<p>절차지향 프로그래밍(C 등)에 비해 실행 속도가 상대적으로 느리고 메모리 사용량이 많습니다.<br />
+객체는 주로 힙(Heap) 영역에 동적 할당되며, 이는 가비지 컬렉터(GC)의 부하로 이어집니다. 또한 다형성 구현을 위한 가상 메서드 호출(Virtual Method Dispatch)은 vtable을 참조하는 추가 비용이 발생합니다. 최적화가 중요한 Unity 환경에서 Update 틱 내의 무분별한 객체 생성을 경계하는 것도 이러한 OOP의 특성 때문입니다.</p>
+<h3 id="2-design-complexity">2. 설계의 복잡성과 높은 초기 진입 장벽 (Design Complexity)</h3>
+<p>단순한 기능 하나를 만들더라도 클래스 설계, 객체 간의 결합도/응집도 고려, 적절한 디자인 패턴 적용 등 초기 설계에 많은 시간과 노력이 필요합니다.<br />
+설계를 잘못하여 상속 구조가 너무 깊어지거나(God Class 발생), 강하게 결합될 경우 오히려 유연성이 떨어지고 '스파게티 코드'가 생성될 위험이 있습니다.</p>
+<h3 id="3-increased-code-size">3. 코드 크기 증가 (Increased Code Size)</h3>
+<p>캡슐화를 위한 프로퍼티(Getter/Setter), 인터페이스 정의, 클래스 분리 등 목적을 달성하기 위해 작성해야 하는 보일러플레이트(Boilerplate) 코드가 많아집니다.<br />
+이는 전체적인 프로젝트의 코드 라인 수와 바이너리 크기를 비대하게 만드는 원인이 됩니다.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Unity/" class="btn btn-neutral float-left" title="유니티란?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../OOPStep1/" class="btn btn-neutral float-right" title="캡슐화">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Unity/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../OOPStep1/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

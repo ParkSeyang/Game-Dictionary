@@ -1,0 +1,30 @@
+site_name: 게임 백화사전
+theme:
+  name: readthedocs
+  language: ko
+
+nav:
+  - 홈: index.md
+  - Unity 게임 개발 노트 :
+      - 유니티란? : Study/Unity.md
+      - 객체지향(OOP)에 대하여 : Study/OOP.md
+      - 객체 지향의 4가지 방법 :
+        - 캡슐화 : Study/OOPStep1.md
+        - 상속 : Study/OOPStep2.md
+        - 다형성 : Study/OOPStep3.md
+        - 추상화 : Study/OOPStep4.md
+  - 게임 소개 :
+      - 장르 :
+          - 아케이드 :
+              - 테트리스 : Games/Tetris.md
+              - 슈퍼 마리오: Games/SuperMario.md
+          - RPG :
+              - 포켓몬스터 : Games/Pokemon.md
+
+
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.superfences
+  - nl2br
+  - pymdownx.highlight:
+      anchor_linenums: true
